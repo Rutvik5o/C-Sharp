@@ -64,7 +64,7 @@ namespace University7
         {
             int i, n;
 
-            n = listBox1.SelectedItems.Count;
+            n = listBox1.Items.Count;
 
             for (i = 0; i < n; i++)
             {
@@ -80,14 +80,12 @@ namespace University7
             {
                 listBox1.Items.Add(listBox2.SelectedItem);
 
-                listBox2.Items.Remove(listBox1.SelectedItem);
+                listBox2.Items.Remove(listBox2.SelectedItem);
             }
 
             else
-
-            {
                 MessageBox.Show("Select any one item in the listBox2 and then click in this Button");
-            }
+            
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -98,21 +96,23 @@ namespace University7
 
             for (i = 0; i < n; i++)
             {
-                listBox1.Items.Add(listBox1.SelectedItems[0]);
+                listBox1.Items.Add(listBox2.SelectedItems[0]);
                 listBox2.Items.Remove(listBox2.SelectedItems[0]);
             }
+
+
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             int i, n;
 
-            n = listBox2.SelectedItems.Count;
+            n = listBox2.Items.Count;
 
             for (i = 0; i < n; i++)
             {
-                listBox1.Items.Add(listBox1.Items[0]);
-                listBox2.Items.Remove(listBox1.Items[0]);
+                listBox1.Items.Add(listBox2.Items[0]);
+                listBox2.Items.Remove(listBox2.Items[0]);
             }
         }
     }
